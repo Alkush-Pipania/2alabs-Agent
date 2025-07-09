@@ -1,0 +1,5 @@
+EXCITED_NODE = "excited_node"
+WORK_NODE = "work_node"
+CASUAL_NODE = "casual_node"
+ACADEMIC_NODE = "academic_node"
+CREATIVE_NODE = "creative_node"
