@@ -1,5 +1,5 @@
 from src.config.graph import app
-from src.config.State import AgentState, VibeType
+from src.config.State import VibeType
 
 def test_graph():
     # Test with different vibe types
@@ -13,9 +13,12 @@ def test_graph():
             "final_response": None,
             "markdown_response": None,
             "error_state": None,
+            "search_queries": None,
             "web_results": None,
             "vector_results": None,
-            "reasoning_results": None
+            "reasoning_results": None,
+            "synthesized_response": None,
+            "memory_results": None
         },
     ]
     

@@ -1,5 +1,4 @@
-
-from typing import Optional , TypedDict
+from typing import Optional, TypedDict
 from enum import Enum
 from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
@@ -29,16 +28,16 @@ class SearchResult:
 # LangGraph State Schema (TypedDict approach)
 class AgentState(TypedDict):
     query: str
-    vibe: VibeType
+    vibe: 'VibeType'
     conversation_history: List[Dict]
     current_step: str
     intermediate_results: Dict[str, Any]
     final_response: Optional[str]
     markdown_response: Optional[str]
     error_state: Optional[str]
-    web_results: Optional[List[SearchResult]]
-    vector_results: Optional[List[SearchResult]]
+    search_queries: Optional[List[str]]
+    web_results: Optional[List['SearchResult']]
+    vector_results: Optional[List['SearchResult']]
     reasoning_results: Optional[Dict[str, Any]]
-
-
-  
+    synthesized_response: Optional[str]
+    memory_results: Optional[Dict[str, Any]]

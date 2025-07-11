@@ -49,7 +49,7 @@ def markdown_node(state : AgentState):
         {"role": "user", "content": state["final_response"]}
     ]
 
-    response = Anthropic_Model.invoke(messages)
+    response = Gemini_Model.invoke(messages)
     
     # Update state with the response
     state["markdown_response"] = response.content

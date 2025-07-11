@@ -80,7 +80,7 @@ def excited_node(state : AgentState):
     )
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": state["query"]}
+        {"role": "user", "content": state.get("synthesized_response", state["query"])}
     ]
 
     response = Groq_Model.invoke(messages)
@@ -123,7 +123,7 @@ def work_node(state : AgentState):
     )
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": state["query"]}
+        {"role": "user", "content": state.get("synthesized_response", state["query"])}
     ]
 
     response = Gemini_Model.invoke(messages)
@@ -166,7 +166,7 @@ def casual_node(state : AgentState):
     )
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": state["query"]}
+        {"role": "user", "content": state.get("synthesized_response", state["query"])}
     ]
 
     response = Gemini_Model.invoke(messages)
@@ -209,7 +209,7 @@ def academic_node(state : AgentState):
     )
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": state["query"]}
+        {"role": "user", "content": state.get("synthesized_response", state["query"])}
     ]
 
     response = Gemini_Model.invoke(messages)
@@ -252,7 +252,7 @@ def creative_node(state : AgentState):
     )
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": state["query"]}
+        {"role": "user", "content": state.get("synthesized_response", state["query"])}
     ]
 
     response = Gemini_Model.invoke(messages)
